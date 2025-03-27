@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Main {
 
     public static int min(int a, int b, int c){
-        int minNum=0;
-        if(a<b) minNum=a;
+        int minNum=a;
+        if(minNum>b) minNum=b;
         if(minNum>c) minNum=c;
         return minNum;
     }
