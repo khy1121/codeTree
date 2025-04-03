@@ -8,15 +8,17 @@ public class Main {
         // Please write your code here.
        
         
-        System.out.print(count369(A, B));
+        System.out.print(count369(A,B));
+        sc.close();
     }
 
-    public static int count369(int A, int B){
-            int count =0;
-            for(int i=A ;  i<=B; i++){
-                if( (i/10) % 3 == 0 || (i%10) % 3 == 0 || i%3==0 )
-                    count++;
+    public static int count369(int A, int B) {
+        int count = 0;
+        for (int i = A; i <= B; i++) {
+            if ((i / 10) % 3 == 0 && (i / 10) != 0 || (i % 10) % 3 == 0 && (i % 10) != 0 || i % 3 == 0) {
+                count++;
             }
-            return count;
         }
+        return count;
+    }
 }
