@@ -15,10 +15,15 @@ public class Main {
     public static int count369(int A, int B) {
         int count = 0;
         for (int i = A; i <= B; i++) {
-            if ((i / 10) % 3 == 0 && (i / 10) != 0 || (i % 10) % 3 == 0 && (i % 10) != 0 || i % 3 == 0) {
+            if (contains369(i) || i % 3 == 0) {
                 count++;
             }
         }
         return count;
+    }
+
+    public static boolean contains369(int num) {
+        String strNum = Integer.toString(num);
+        return strNum.contains("3") || strNum.contains("6") || strNum.contains("9");
     }
 }
