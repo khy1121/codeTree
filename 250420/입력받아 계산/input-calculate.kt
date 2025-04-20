@@ -1,6 +1,7 @@
 fun main(args : Array<String>){
     var a = readln();
 
-    a += 2
-    print("$a")
+    var b = a.toString().toInt()
+       
+    print("${b+2}")
 } 
